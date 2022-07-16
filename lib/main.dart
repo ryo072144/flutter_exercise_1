@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -13,53 +15,55 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('タイトル', style: TextStyle(fontSize: 20, color: Color(0xff222222), fontWeight: FontWeight.bold),),),
-      body: Column(
-        children: [
-          Container(
-            padding: EdgeInsets.only(left: 20, top: 10, bottom: 10),
-            child: Row(
-              children: [
-                Icon(Icons.thumb_up, color: Colors.blue, size: 30,),
-                SizedBox(width: 10,),
-                Text('タイル１', style: TextStyle(fontSize: 18, color: Color(0xff222222),),)
-              ],
+        appBar: AppBar(title: const Text('タイトル', style: TextStyle(fontSize: 20, color: Color(0xff222222), fontWeight: FontWeight.bold),),),
+        body: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.only(left: 20, top: 10, bottom: 10),
+              child: Row(
+                children: const [
+                  Icon(Icons.thumb_up, color: Colors.blue, size: 30,),
+                  SizedBox(width: 10,),
+                  Text('タイル１', style: TextStyle(fontSize: 18, color: Color(0xff222222),),)
+                ],
+              ),
             ),
-          ),
-          Divider(height: 20,),
-          Container(
-            padding: EdgeInsets.only(left: 20, top: 10, bottom: 10),
-            child: Row(
-              children: [
-                Icon(Icons.thumb_up, color: Colors.blue, size: 30,),
-                SizedBox(width: 10,),
-                Text('タイル2', style: TextStyle(fontSize: 18, color: Color(0xff222222),))
-              ],
+            const Divider(height: 20,),
+            Container(
+              padding: const EdgeInsets.only(left: 20, top: 10, bottom: 10),
+              child: Row(
+                children: const [
+                  Icon(Icons.thumb_up, color: Colors.blue, size: 30,),
+                  SizedBox(width: 10,),
+                  Text('タイル2', style: TextStyle(fontSize: 18, color: Color(0xff222222),))
+                ],
+              ),
             ),
-          ),
-          Divider(height: 20,),
-          Container(
-            padding: EdgeInsets.only(left: 20, top: 10, bottom: 10),
-            child: Row(
-              children: [
-                Icon(Icons.thumb_up, color: Colors.blue, size: 30,),
-                SizedBox(width: 10,),
-                Text('タイル３', style: TextStyle(fontSize: 18, color: Color(0xff222222),))
-              ],
+            const Divider(height: 20,),
+            Container(
+              padding: const EdgeInsets.only(left: 20, top: 10, bottom: 10),
+              child: Row(
+                children: const [
+                  Icon(Icons.thumb_up, color: Colors.blue, size: 30,),
+                  SizedBox(width: 10,),
+                  Text('タイル３', style: TextStyle(fontSize: 18, color: Color(0xff222222),))
+                ],
+              ),
             ),
-          ),
-          Divider(height: 20,),
-        ],
-      )
+            const Divider(height: 20,),
+          ],
+        )
     );
   }
 }
