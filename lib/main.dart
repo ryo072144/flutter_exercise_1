@@ -26,11 +26,12 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //Color(8桁のカラーコード)で色を自由に指定することができます。最初の2桁は透過率を表します。00で完全に透明になります。
+      // Color(8桁のカラーコード)で色を自由に指定することができます。最初の2桁は透過率を表します。00で完全に透明になります。
         appBar: AppBar(title: const Text('タイトル', style: TextStyle(fontSize: 20, color: Color(0xff222222), fontWeight: FontWeight.bold),),),
         body: Column(
           children: [
             Container(
+              // 内容が変化しないウィジェットにconstをつけると、処理が少し軽くなります。
               padding: const EdgeInsets.only(left: 20, top: 10, bottom: 10),
               child: Row(
                 children: const [
